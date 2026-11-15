@@ -1,0 +1,65 @@
+# ============================================================
+# Proyecto 3 - CC3069 Computación Paralela y Distribuida
+# ============================================================
+
+# --- DATASET (ASL Alphabet de Kaggle, ~1 GB) ---
+# GitHub rechaza archivos de más de 100 MB; cada integrante lo descarga localmente
+archive/
+asl_alphabet_train/
+asl_alphabet_test/
+*.zip
+
+# --- Datos intermedios generados por el pipeline ---
+# (arreglos preprocesados que se pueden regenerar)
+cache/
+*.npy
+*.npz
+
+# --- Pesos de modelos entrenados (se regeneran al entrenar) ---
+modelos/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# --- Credenciales (NUNCA subir) ---
+kaggle.json
+.env
+
+# --- Entornos virtuales ---
+venv/
+.venv/
+env/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Perfilado de CUDA (archivos de Nsight/nvprof suelen ser muy pesados) ---
+*.nsys-rep
+*.ncu-rep
+*.qdrep
+*.nvvp
+
+# --- IDE y sistema operativo ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+PLAN_PROYECTO3.md
+
+# --- NO ignorar evidencias del proyecto ---
+# benchmarks/ (CSV de tiempos, logs de nvidia-smi y capturas) SÍ se suben
+!benchmarks/
+!benchmarks/**
