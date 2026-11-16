@@ -1,0 +1,86 @@
+operacion,llamadas,self_cpu_ms_por_lote,categoria,pct
+aten::convolution_backward,100,75.43774500000026,Convolución (atrás),49.85809284516652
+aten::mkldnn_convolution,100,34.466410000000124,Convolución (adelante),22.77943846040965
+aten::threshold_backward,120,10.551020000000026,ReLU,6.973349147316218
+aten::clamp_min_,120,4.537930000000019,ReLU,2.9991953665219797
+aten::max_pool2d_with_indices,60,4.416559999999901,MaxPool,2.918979862617088
+aten::max_pool2d_with_indices_backward,60,3.5961799999999897,MaxPool,2.3767767226861007
+aten::copy_,1360,2.3832199999999104,"Otros (Adam, dropout, pérdida, copias)",1.5751107622643397
+aten::mm,80,2.190059999999998,Capa densa (matmul),1.4474480224254438
+aten::fill_,120,2.1291100000000522,"Otros (Adam, dropout, pérdida, copias)",1.4071651274514465
+Optimizer.step#Adam.step,20,1.3986999999999898,"Otros (Adam, dropout, pérdida, copias)",0.9244246956551214
+aten::addmm,40,1.2565149999999288,Capa densa (matmul),0.830452203089324
+aten::sqrt,280,1.2334400000000343,"Otros (Adam, dropout, pérdida, copias)",0.8152015418666568
+aten::addcdiv_,280,1.1097550000000702,"Otros (Adam, dropout, pérdida, copias)",0.7334560149616226
+aten::lerp_,280,0.9510999999999621,"Otros (Adam, dropout, pérdida, copias)",0.6285982183724582
+aten::div,280,0.7181850000001636,"Otros (Adam, dropout, pérdida, copias)",0.47466072070438936
+aten::addcmul_,280,0.6334999999999635,"Otros (Adam, dropout, pérdida, copias)",0.4186909592460785
+aten::mul_,280,0.6251650000002046,"Otros (Adam, dropout, pérdida, copias)",0.41318221552829576
+aten::add_,560,0.5000399999997301,"Otros (Adam, dropout, pérdida, copias)",0.33048496805257793
+aten::relu_,120,0.2585449999999943,ReLU,0.1708768019862371
+aten::_to_copy,1240,0.2177650000000609,"Otros (Adam, dropout, pérdida, copias)",0.14392460416772382
+autograd::engine::evaluate_function: ConvolutionBackward0,100,0.16078500000008605,Convolución (atrás),0.10626554993278711
+aten::empty,560,0.14985499999983032,"Otros (Adam, dropout, pérdida, copias)",0.0990417264368645
+aten::convolution,100,0.14058499999988835,Convolución (adelante),0.09291502526529848
+autograd::engine::evaluate_function: ReluBackward0,120,0.12878000000006723,ReLU,0.08511289933976518
+aten::to,1260,0.11683999999980951,"Otros (Adam, dropout, pérdida, copias)",0.07722154961047335
+autograd::engine::evaluate_function: MaxPool2DWithIndicesBackward0,60,0.11346000000002679,MaxPool,0.07498764993855409
+aten::max_pool2d,60,0.10259000000010128,MaxPool,0.06780348146661415
+aten::resize_,380,0.09697999999993027,"Otros (Adam, dropout, pérdida, copias)",0.06409573674452697
+ReluBackward0,120,0.09327000000002372,ReLU,0.061643734441821495
+aten::_convolution,100,0.09105000000007582,Convolución (adelante),0.06017649856257203
+aten::bernoulli_,20,0.08672500000001891,"Otros (Adam, dropout, pérdida, copias)",0.05731803226618179
+Optimizer.zero_grad#Adam.zero_grad,20,0.08623000000002619,"Otros (Adam, dropout, pérdida, copias)",0.056990878320130056
+aten::empty_strided,1180,0.07252499999983775,"Otros (Adam, dropout, pérdida, copias)",0.047933009975147045
+ConvolutionBackward0,100,0.07130999999992163,Convolución (atrás),0.04712999574397279
+aten::_log_softmax,20,0.07046500000001579,"Otros (Adam, dropout, pérdida, copias)",0.04657152082601931
+aten::nll_loss_backward,20,0.06567500000000363,"Otros (Adam, dropout, pérdida, copias)",0.043405728095484306
+aten::_log_softmax_backward_data,20,0.06255499999997009,"Otros (Adam, dropout, pérdida, copias)",0.041343666859711796
+torch::autograd::AccumulateGrad,280,0.05620500000003085,"Otros (Adam, dropout, pérdida, copias)",0.037146843511349815
+aten::t,200,0.055884999999973664,Capa densa (matmul),0.03693535005123507
+AddmmBackward0,40,0.05480499999989915,Capa densa (matmul),0.03622155962342609
+autograd::engine::evaluate_function: AddmmBackward0,40,0.04992500000013643,Capa densa (matmul),0.032996284357409304
+autograd::engine::evaluate_function: torch::autograd::AccumulateGrad,280,0.04371499999991829,"Otros (Adam, dropout, pérdida, copias)",0.028891989397646665
+MaxPool2DWithIndicesBackward0,60,0.04364000000001106,MaxPool,0.02884242061800244
+aten::as_strided_,200,0.04274500000000262,"Otros (Adam, dropout, pérdida, copias)",0.028250899846844122
+aten::flatten,20,0.042465000000093275,"Otros (Adam, dropout, pérdida, copias)",0.028065843069336703
+aten::sum,40,0.039585000000023136,"Otros (Adam, dropout, pérdida, copias)",0.02616240192859772
+detach,280,0.03843499999998385,"Otros (Adam, dropout, pérdida, copias)",0.02540234730642019
+aten::conv2d,100,0.03600999999988337,Convolución (adelante),0.023799623429208088
+aten::div_,20,0.03594000000001943,"Otros (Adam, dropout, pérdida, copias)",0.023753359234906173
+aten::mul,40,0.03371499999997832,"Otros (Adam, dropout, pérdida, copias)",0.022282818770281404
+aten::transpose,200,0.03126000000006461,"Otros (Adam, dropout, pérdida, copias)",0.020660267381310524
+aten::clone,60,0.030094999999914218,"Otros (Adam, dropout, pérdida, copias)",0.019890299003118457
+aten::item,280,0.02862000000019907,"Otros (Adam, dropout, pérdida, copias)",0.018915446335764488
+aten::slice,40,0.028125000000001725,"Otros (Adam, dropout, pérdida, copias)",0.018588292389577515
+aten::as_strided,280,0.025699999999972946,"Otros (Adam, dropout, pérdida, copias)",0.0169855685124128
+aten::empty_like,100,0.0256199999999626,"Otros (Adam, dropout, pérdida, copias)",0.016932695147386725
+aten::detach,280,0.01869999999994907,"Otros (Adam, dropout, pérdida, copias)",0.012359149073213567
+aten::_local_scalar_dense,280,0.01864499999996915,"Otros (Adam, dropout, pérdida, copias)",0.012322798634776111
+NllLossBackward0,20,0.017994999999986976,"Otros (Adam, dropout, pérdida, copias)",0.011893202544006571
+aten::zero_,80,0.01597999999986532,"Otros (Adam, dropout, pérdida, copias)",0.010561454662504072
+aten::cross_entropy_loss,20,0.015484999999981663,"Otros (Adam, dropout, pérdida, copias)",0.010234300716524421
+aten::dropout,20,0.014325000000064028,"Otros (Adam, dropout, pérdida, copias)",0.009467636923799885
+aten::linear,40,0.01303499999999767,Capa densa (matmul),0.008615053912820792
+aten::view,60,0.012519999999949868,"Otros (Adam, dropout, pérdida, copias)",0.008274681625477846
+autograd::engine::evaluate_function: NllLossBackward0,20,0.012244999999981883,"Otros (Adam, dropout, pérdida, copias)",0.008092929433245367
+aten::nll_loss_forward,20,0.011865000000021246,"Otros (Adam, dropout, pérdida, copias)",0.007841780949429996
+aten::nll_loss,20,0.010514999999910287,"Otros (Adam, dropout, pérdida, copias)",0.006949542914656995
+aten::_unsafe_view,20,0.009675000000006548,"Otros (Adam, dropout, pérdida, copias)",0.0063943725820186014
+autograd::engine::evaluate_function: LogSoftmaxBackward0,20,0.008604999999978828,"Otros (Adam, dropout, pérdida, copias)",0.005687191324867952
+LogSoftmaxBackward0,20,0.007945000000052096,"Otros (Adam, dropout, pérdida, copias)",0.005250986063507651
+autograd::engine::evaluate_function: TBackward0,40,0.006649999999932333,"Otros (Adam, dropout, pérdida, copias)",0.004395098467179559
+aten::log_softmax,20,0.006424999999987994,"Otros (Adam, dropout, pérdida, copias)",0.004246392128099735
+aten::contiguous,40,0.006285000000030777,"Otros (Adam, dropout, pérdida, copias)",0.0041538637393443425
+aten::expand,40,0.004435000000116997,"Otros (Adam, dropout, pérdida, copias)",0.0029311671733314136
+aten::nll_loss_nd,20,0.004230000000086511,"Otros (Adam, dropout, pérdida, copias)",0.0027956791754494637
+autograd::engine::evaluate_function: UnsafeViewBackward0,20,0.0035049999999646393,"Otros (Adam, dropout, pérdida, copias)",0.002316514304882059
+aten::ones_like,20,0.0032399999999757714,"Otros (Adam, dropout, pérdida, copias)",0.0021413712832631855
+TBackward0,40,0.00319500000001608,"Otros (Adam, dropout, pérdida, copias)",0.002111630015466504
+autograd::engine::evaluate_function: MulBackward0,20,0.0031749999999508872,"Otros (Adam, dropout, pérdida, copias)",0.002098411674168607
+MulBackward0,20,0.0030500000000240105,"Otros (Adam, dropout, pérdida, copias)",0.002015797041374374
+autograd::engine::evaluate_function: CloneBackward0,20,0.0027799999999788268,"Otros (Adam, dropout, pérdida, copias)",0.001837349434404578
+aten::resolve_conj,280,0.002430000000059954,"Otros (Adam, dropout, pérdida, copias)",0.0016060284624990237
+aten::reshape,20,0.0022449999999826107,"Otros (Adam, dropout, pérdida, copias)",0.0014837588058409148
+UnsafeViewBackward0,20,0.002045000000012442,"Otros (Adam, dropout, pérdida, copias)",0.001351575393312532
+CloneBackward0,20,0.0005750000000207364,"Otros (Adam, dropout, pérdida, copias)",0.00038002731108948876

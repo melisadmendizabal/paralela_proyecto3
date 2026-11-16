@@ -1,0 +1,85 @@
+A. Desglose por función (corrida completa de las fases de datos)...
+   F1 primera pasada (caché fría): 13.5 s
+         fase                                          parte  segundos  por_imagen  ms_por_imagen
+           F1                   listar carpetas (os.listdir)     0.090       False            NaN
+           F1               bucle por imagen: leer metadatos     7.619        True          0.088
+           F1                            construir DataFrame     0.050       False            NaN
+EDA_promedios   bucle por imagen: cargar y acumular (29×200)     3.624        True          0.625
+EDA_promedios                        distancias entre clases     0.005       False            NaN
+           F2                           submuestreo (pandas)     0.018       False            NaN
+           F2              bucle por imagen: perceptual hash    11.619        True          0.668
+           F2        verificar duplicados (MSE, 22 imágenes)     0.019       False            NaN
+   EDA_brillo                       bucle por imagen: brillo    10.648        True          0.612
+   EDA_brillo                              agrupar por clase     0.002       False            NaN
+           F3                        partición estratificada     0.035       False            NaN
+           F3 bucle por imagen: cargar + resize + normalizar    10.995        True          0.632
+           F3                                       np.stack     0.256       False            NaN
+           F3                            codificar etiquetas     0.002       False            NaN
+           F3                        a tensores NCHW (copia)     0.172       False            NaN
+
+B. Desglose por paso dentro de cada imagen...
+                           operacion                   paso                 gil  ms_por_imagen    pct    n  ms_real_por_imagen
+                Op. 1 Metadatos (F1) leer bytes del archivo       C, libera GIL          0.055 68.167 3000               0.081
+                Op. 1 Metadatos (F1) analizar cabecera JPEG Python, retiene GIL          0.020 25.109 3000               0.081
+                Op. 1 Metadatos (F1)    orquestación Python Python, retiene GIL          0.005  6.724 3000               0.081
+         Op. 3 Imagen promedio (EDA)       abrir (cabecera) Python, retiene GIL          0.142 18.449 1000               0.769
+         Op. 3 Imagen promedio (EDA)       decodificar JPEG       C, libera GIL          0.257 33.480 1000               0.769
+         Op. 3 Imagen promedio (EDA)         convertir modo       C, libera GIL          0.022  2.894 1000               0.769
+         Op. 3 Imagen promedio (EDA)          redimensionar       C, libera GIL          0.236 30.666 1000               0.769
+         Op. 3 Imagen promedio (EDA)                a numpy               Mixto          0.053  6.949 1000               0.769
+         Op. 3 Imagen promedio (EDA)       acumular / media               Mixto          0.006  0.716 1000               0.769
+         Op. 3 Imagen promedio (EDA)    orquestación Python Python, retiene GIL          0.053  6.846 1000               0.769
+          Op. 6 Perceptual hash (F2)       abrir (cabecera) Python, retiene GIL          0.138 20.962 1000               0.653
+          Op. 6 Perceptual hash (F2)       decodificar JPEG       C, libera GIL          0.214 32.453 1000               0.653
+          Op. 6 Perceptual hash (F2)         convertir modo       C, libera GIL          0.037  5.541 1000               0.653
+          Op. 6 Perceptual hash (F2)          redimensionar       C, libera GIL          0.127 19.235 1000               0.653
+          Op. 6 Perceptual hash (F2)                a numpy               Mixto          0.017  2.632 1000               0.653
+          Op. 6 Perceptual hash (F2)                 DCT 2D               Mixto          0.045  6.775 1000               0.653
+          Op. 6 Perceptual hash (F2)       mediana + umbral               Mixto          0.042  6.330 1000               0.653
+          Op. 6 Perceptual hash (F2)           hash a texto Python, retiene GIL          0.040  6.072 1000               0.653
+          Op. 6 Perceptual hash (F2)    orquestación Python Python, retiene GIL          0.000  0.000 1000               0.653
+                  Op. 8 Brillo (EDA)       abrir (cabecera) Python, retiene GIL          0.128 21.119 1000               0.606
+                  Op. 8 Brillo (EDA)       decodificar JPEG       C, libera GIL          0.205 33.874 1000               0.606
+                  Op. 8 Brillo (EDA)         convertir modo       C, libera GIL          0.010  1.655 1000               0.606
+                  Op. 8 Brillo (EDA)          redimensionar       C, libera GIL          0.218 35.895 1000               0.606
+                  Op. 8 Brillo (EDA)                a numpy               Mixto          0.029  4.775 1000               0.606
+                  Op. 8 Brillo (EDA)       acumular / media               Mixto          0.013  2.098 1000               0.606
+                  Op. 8 Brillo (EDA)    orquestación Python Python, retiene GIL          0.004  0.585 1000               0.606
+Op. 10 Carga y preprocesamiento (F3)       abrir (cabecera) Python, retiene GIL          0.129 21.517 1000               0.597
+Op. 10 Carga y preprocesamiento (F3)       decodificar JPEG       C, libera GIL          0.205 34.393 1000               0.597
+Op. 10 Carga y preprocesamiento (F3)         convertir modo       C, libera GIL          0.010  1.739 1000               0.597
+Op. 10 Carga y preprocesamiento (F3)          redimensionar       C, libera GIL          0.217 36.372 1000               0.597
+Op. 10 Carga y preprocesamiento (F3)                a numpy               Mixto          0.026  4.436 1000               0.597
+Op. 10 Carga y preprocesamiento (F3)        normalizar /255               Mixto          0.007  1.240 1000               0.597
+Op. 10 Carga y preprocesamiento (F3)    orquestación Python Python, retiene GIL          0.002  0.302 1000               0.597
+
+C. Desglose del entrenamiento en CPU...
+                                fase  ms_por_lote   pct
+Propagación hacia adelante + pérdida        45.83 30.58
+             Propagación hacia atrás        97.11 64.78
+                    Optimizador Adam         6.96  4.64
+                             categoria  self_cpu_ms_por_lote   pct
+                   Convolución (atrás)                 75.67 50.01
+                Convolución (adelante)                 34.73 22.96
+                                  ReLU                 15.57 10.29
+Otros (Adam, dropout, pérdida, copias)                 13.44  8.88
+                               MaxPool                  8.27  5.47
+                   Capa densa (matmul)                  3.62  2.39
+                             operacion  llamadas  self_cpu_ms_por_lote                              categoria   pct
+            aten::convolution_backward       100                 75.44                    Convolución (atrás) 49.86
+              aten::mkldnn_convolution       100                 34.47                 Convolución (adelante) 22.78
+              aten::threshold_backward       120                 10.55                                   ReLU  6.97
+                      aten::clamp_min_       120                  4.54                                   ReLU  3.00
+         aten::max_pool2d_with_indices        60                  4.42                                MaxPool  2.92
+aten::max_pool2d_with_indices_backward        60                  3.60                                MaxPool  2.38
+                           aten::copy_      1360                  2.38 Otros (Adam, dropout, pérdida, copias)  1.58
+                              aten::mm        80                  2.19                    Capa densa (matmul)  1.45
+                           aten::fill_       120                  2.13 Otros (Adam, dropout, pérdida, copias)  1.41
+              Optimizer.step#Adam.step        20                  1.40 Otros (Adam, dropout, pérdida, copias)  0.92
+                           aten::addmm        40                  1.26                    Capa densa (matmul)  0.83
+                            aten::sqrt       280                  1.23 Otros (Adam, dropout, pérdida, copias)  0.82
+                        aten::addcdiv_       280                  1.11 Otros (Adam, dropout, pérdida, copias)  0.73
+                           aten::lerp_       280                  0.95 Otros (Adam, dropout, pérdida, copias)  0.63
+                             aten::div       280                  0.72 Otros (Adam, dropout, pérdida, copias)  0.47
+
+Guardado en C:\Users\melis\Documents\noCuarentena\semestre 8\paralela\paralela_proyecto3\benchmarks\perfil

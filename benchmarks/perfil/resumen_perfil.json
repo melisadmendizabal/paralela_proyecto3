@@ -1,0 +1,113 @@
+{
+  "F1_primera_pasada_cache_fria_s": 13.520825899991905,
+  "datos_total_s": 45.15414610003063,
+  "datos_bucle_por_imagen_s": 44.50424680001743,
+  "datos_fraccion_bucle_por_imagen": 0.9856070957786807,
+  "fraccion_sin_gil_por_operacion": {
+    "Op. 1 Metadatos (F1)": 0.682,
+    "Op. 10 Carga y preprocesamiento (F3)": 0.725,
+    "Op. 3 Imagen promedio (EDA)": 0.67,
+    "Op. 6 Perceptual hash (F2)": 0.572,
+    "Op. 8 Brillo (EDA)": 0.714
+  },
+  "fraccion_mixta_por_operacion": {
+    "Op. 1 Metadatos (F1)": 0.0,
+    "Op. 10 Carga y preprocesamiento (F3)": 0.057,
+    "Op. 3 Imagen promedio (EDA)": 0.077,
+    "Op. 6 Perceptual hash (F2)": 0.157,
+    "Op. 8 Brillo (EDA)": 0.069
+  },
+  "prediccion_hilos_amdahl": {
+    "Op. 1 Metadatos (F1)": {
+      "2_hilos": [
+        1.52,
+        1.52
+      ],
+      "4_hilos": [
+        2.05,
+        2.05
+      ],
+      "8_hilos": [
+        2.48,
+        2.48
+      ],
+      "16_hilos": [
+        2.77,
+        2.77
+      ]
+    },
+    "Op. 10 Carga y preprocesamiento (F3)": {
+      "2_hilos": [
+        1.57,
+        1.64
+      ],
+      "4_hilos": [
+        2.19,
+        2.42
+      ],
+      "8_hilos": [
+        2.74,
+        3.17
+      ],
+      "16_hilos": [
+        3.12,
+        3.75
+      ]
+    },
+    "Op. 3 Imagen promedio (EDA)": {
+      "2_hilos": [
+        1.5,
+        1.6
+      ],
+      "4_hilos": [
+        2.01,
+        2.27
+      ],
+      "8_hilos": [
+        2.42,
+        2.89
+      ],
+      "16_hilos": [
+        2.69,
+        3.34
+      ]
+    },
+    "Op. 6 Perceptual hash (F2)": {
+      "2_hilos": [
+        1.4,
+        1.57
+      ],
+      "4_hilos": [
+        1.75,
+        2.21
+      ],
+      "8_hilos": [
+        2.0,
+        2.76
+      ],
+      "16_hilos": [
+        2.16,
+        3.16
+      ]
+    },
+    "Op. 8 Brillo (EDA)": {
+      "2_hilos": [
+        1.56,
+        1.64
+      ],
+      "4_hilos": [
+        2.15,
+        2.42
+      ],
+      "8_hilos": [
+        2.66,
+        3.18
+      ],
+      "16_hilos": [
+        3.02,
+        3.76
+      ]
+    }
+  },
+  "entrenamiento_hilos_torch": 10
+}

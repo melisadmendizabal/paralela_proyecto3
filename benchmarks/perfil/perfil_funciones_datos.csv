@@ -1,0 +1,16 @@
+fase,parte,segundos,por_imagen,ms_por_imagen
+F1,listar carpetas (os.listdir),0.0898478999879444,False,
+F1,bucle por imagen: leer metadatos,7.619068100000732,True,0.08757549540230726
+F1,construir DataFrame,0.05047770000237506,False,
+EDA_promedios,bucle por imagen: cargar y acumular (29×200),3.6239636999962386,True,0.6248213275855584
+EDA_promedios,distancias entre clases,0.004527800003415905,False,
+F2,submuestreo (pandas),0.017845299997134134,False,
+F2,bucle por imagen: perceptual hash,11.618618100008462,True,0.6677366724142794
+F2,"verificar duplicados (MSE, 22 imágenes)",0.019241300004068762,False,
+EDA_brillo,bucle por imagen: brillo,10.64802680000139,True,0.6122722557645558
+EDA_brillo,agrupar por clase,0.0022361000010278076,False,
+F3,partición estratificada,0.03491500001109671,False,
+F3,bucle por imagen: cargar + resize + normalizar,10.994570100010606,True,0.6321988442303839
+F3,np.stack,0.25647449999814853,False,
+F3,codificar etiquetas,0.0018767000001389533,False,
+F3,a tensores NCHW (copia),0.1724570000078529,False,
