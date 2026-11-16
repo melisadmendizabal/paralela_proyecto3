@@ -1,0 +1,2 @@
+corrida,tipo,inicio,F1_ingesta,EDA_promedios,F2_limpieza,EDA_brillo,F3_preprocesamiento,F4_entrenamiento,F5_evaluacion,total_fases_s,total_reloj_s,test_accuracy,test_loss,epochs,hilos_torch
+corrida_01,medicion,2026-11-15T16:58:24,7.519,3.542,10.999,10.205,12.017,107.644,2.116,154.043,154.341,0.8945956305097739,0.3437783792129464,3,10

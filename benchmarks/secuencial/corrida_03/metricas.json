@@ -1,0 +1,120 @@
+{
+  "corrida": "corrida_03",
+  "inicio": "2026-11-15T16:13:48",
+  "imagenes_dataset": 87000,
+  "limpieza": {
+    "imagenes_hash_repetido": 22,
+    "grupos_hash_repetido": 11,
+    "duplicados_eliminados": 9,
+    "submuestra_final": 17391
+  },
+  "particion": {
+    "train": 12173,
+    "val": 2609,
+    "test": 2609
+  },
+  "forma_X_train": [
+    12173,
+    64,
+    64,
+    3
+  ],
+  "modelo": {
+    "nombre": "cnn2",
+    "parametros": 2244285,
+    "epochs": 15,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "dropout": 0.5,
+    "device": "cpu",
+    "hilos_torch": 10
+  },
+  "test": {
+    "loss": 0.0663541115623363,
+    "accuracy": 0.9819854350325795,
+    "val_loss_final": 0.05975844206459086,
+    "val_accuracy_final": 0.9808355691835953
+  },
+  "tiempos_s": {
+    "F1_ingesta": 7.439250900002662,
+    "EDA_promedios": 3.4376638999965508,
+    "F2_limpieza": 11.655290299997432,
+    "EDA_brillo": 12.165158599993447,
+    "F3_preprocesamiento": 11.879367700006696,
+    "F4_entrenamiento": 583.2725260000007,
+    "F5_evaluacion": 2.2297484000009717
+  },
+  "tiempo_total_s": 632.3651780999935,
+  "recursos_por_fase": {
+    "F1_ingesta": {
+      "muestras": 5,
+      "cpu_total_pct_prom": 11.0,
+      "cpu_proceso_pct_prom": 98.5,
+      "nucleos_sobre_50pct_prom": 1.8,
+      "ram_proceso_mb_max": 1695.6,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "EDA_promedios": {
+      "muestras": 3,
+      "cpu_total_pct_prom": 12.2,
+      "cpu_proceso_pct_prom": 98.2,
+      "nucleos_sobre_50pct_prom": 2.0,
+      "ram_proceso_mb_max": 1698.0,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F2_limpieza": {
+      "muestras": 8,
+      "cpu_total_pct_prom": 11.6,
+      "cpu_proceso_pct_prom": 96.9,
+      "nucleos_sobre_50pct_prom": 1.8,
+      "ram_proceso_mb_max": 1699.5,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "EDA_brillo": {
+      "muestras": 9,
+      "cpu_total_pct_prom": 18.0,
+      "cpu_proceso_pct_prom": 97.2,
+      "nucleos_sobre_50pct_prom": 2.6,
+      "ram_proceso_mb_max": 1699.8,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F3_preprocesamiento": {
+      "muestras": 9,
+      "cpu_total_pct_prom": 19.0,
+      "cpu_proceso_pct_prom": 98.0,
+      "nucleos_sobre_50pct_prom": 2.4,
+      "ram_proceso_mb_max": 2491.7,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F4_entrenamiento": {
+      "muestras": 418,
+      "cpu_total_pct_prom": 53.2,
+      "cpu_proceso_pct_prom": 681.0,
+      "nucleos_sobre_50pct_prom": 9.9,
+      "ram_proceso_mb_max": 1837.9,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F5_evaluacion": {
+      "muestras": 2,
+      "cpu_total_pct_prom": 61.2,
+      "cpu_proceso_pct_prom": 693.2,
+      "nucleos_sobre_50pct_prom": 12.5,
+      "ram_proceso_mb_max": 1616.7,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    }
+  }
+}

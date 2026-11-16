@@ -5,6 +5,7 @@
 # --- DATASET (ASL Alphabet de Kaggle, ~1 GB) ---
 # GitHub rechaza archivos de más de 100 MB; cada integrante lo descarga localmente
 archive/
+informe/
 asl_alphabet_train/
 asl_alphabet_test/
 *.zip
