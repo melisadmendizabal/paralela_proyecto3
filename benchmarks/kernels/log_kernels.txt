@@ -1,0 +1,64 @@
+C:\Users\melis\AppData\Local\Programs\Python\Python313\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 1 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Conv 1 Numba v1, compartida                      8x8    2.675 ms  err=0.00e+00  regs=72 shared=2704  ocupación=58%  ok
+Conv 1 Numba v1, compartida                     16x16   2.622 ms  err=0.00e+00  regs=72 shared=3600  ocupación=50%  ok
+Conv 1 Numba v1, compartida, máx. 40 registros  16x16   2.592 ms  err=0.00e+00  regs=40 shared=3600  ocupación=100%  ok
+Conv 1 Numba v1, compartida                     32x32     nan ms  err=nan  regs=72 shared=6928  ocupación=0%  CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 1 Numba v1, compartida, máx. 64 registros  32x32   3.609 ms  err=0.00e+00  regs=64 shared=6928  ocupación=67%  ok
+Conv 1 Numba, sin compartida                    16x16   1.382 ms  err=0.00e+00  regs=33 shared=0  ocupación=100%  ok
+Conv 1 Numba v2, 8 filtros por hilo             16x16   1.268 ms  err=0.00e+00  regs=72 shared=23616  ocupación=50%  ok
+Conv 1 PyTorch GPU   1.033 ms | PyTorch CPU     5.76 ms
+Conv 2 Numba v1, compartida                      8x8   12.629 ms  err=3.81e-06  regs=72 shared=2704  ocupación=58%  ok
+Conv 2 Numba v1, compartida                     16x16  13.047 ms  err=3.81e-06  regs=72 shared=3600  ocupación=50%  ok
+Conv 2 Numba v1, compartida, máx. 40 registros  16x16  14.179 ms  err=3.81e-06  regs=40 shared=3600  ocupación=100%  ok
+Conv 2 Numba v1, compartida                     32x32     nan ms  err=nan  regs=72 shared=6928  ocupación=0%  CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 2 Numba v1, compartida, máx. 64 registros  32x32  16.669 ms  err=3.81e-06  regs=64 shared=6928  ocupación=67%  ok
+Conv 2 Numba, sin compartida                    16x16  10.481 ms  err=3.81e-06  regs=33 shared=0  ocupación=100%  ok
+Conv 2 Numba v2, 8 filtros por hilo             16x16   8.305 ms  err=3.81e-06  regs=72 shared=23616  ocupación=50%  ok
+Conv 2 PyTorch GPU   1.578 ms | PyTorch CPU    11.18 ms
+Conv 3 Numba v1, compartida                      8x8    5.906 ms  err=3.58e-06  regs=72 shared=2704  ocupación=58%  ok
+Conv 3 Numba v1, compartida                     16x16   6.168 ms  err=3.58e-06  regs=72 shared=3600  ocupación=50%  ok
+Conv 3 Numba v1, compartida, máx. 40 registros  16x16   6.990 ms  err=3.58e-06  regs=40 shared=3600  ocupación=100%  ok
+Conv 3 Numba v1, compartida                     32x32     nan ms  err=nan  regs=72 shared=6928  ocupación=0%  CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 3 Numba v1, compartida, máx. 64 registros  32x32   8.260 ms  err=3.58e-06  regs=64 shared=6928  ocupación=67%  ok
+Conv 3 Numba, sin compartida                    16x16   4.718 ms  err=3.58e-06  regs=33 shared=0  ocupación=100%  ok
+Conv 3 Numba v2, 8 filtros por hilo             16x16   4.647 ms  err=3.58e-06  regs=72 shared=23616  ocupación=50%  ok
+Conv 3 PyTorch GPU   0.490 ms | PyTorch CPU     6.48 ms
+Conv 4 Numba v1, compartida                      8x8   12.011 ms  err=6.20e-06  regs=72 shared=2704  ocupación=58%  ok
+Conv 4 Numba v1, compartida                     16x16  12.274 ms  err=6.20e-06  regs=72 shared=3600  ocupación=50%  ok
+Conv 4 Numba v1, compartida, máx. 40 registros  16x16  13.580 ms  err=6.20e-06  regs=40 shared=3600  ocupación=100%  ok
+Conv 4 Numba v1, compartida                     32x32     nan ms  err=nan  regs=72 shared=6928  ocupación=0%  CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 4 Numba v1, compartida, máx. 64 registros  32x32  16.228 ms  err=6.20e-06  regs=64 shared=6928  ocupación=67%  ok
+Conv 4 Numba, sin compartida                    16x16   8.896 ms  err=6.20e-06  regs=33 shared=0  ocupación=100%  ok
+Conv 4 Numba v2, 8 filtros por hilo             16x16   7.804 ms  err=6.20e-06  regs=72 shared=23616  ocupación=50%  ok
+Conv 4 PyTorch GPU   0.745 ms | PyTorch CPU     9.81 ms
+Conv 5 Numba v1, compartida                      8x8    5.384 ms  err=3.67e-06  regs=72 shared=2704  ocupación=58%  ok
+Conv 5 Numba v1, compartida                     16x16   5.374 ms  err=3.67e-06  regs=72 shared=3600  ocupación=50%  ok
+Conv 5 Numba v1, compartida, máx. 40 registros  16x16   6.503 ms  err=3.67e-06  regs=40 shared=3600  ocupación=100%  ok
+Conv 5 Numba v1, compartida                     32x32     nan ms  err=nan  regs=72 shared=6928  ocupación=0%  CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 5 Numba v1, compartida, máx. 64 registros  32x32  19.926 ms  err=3.67e-06  regs=64 shared=6928  ocupación=67%  ok
+Conv 5 Numba, sin compartida                    16x16   4.453 ms  err=3.67e-06  regs=33 shared=0  ocupación=100%  ok
+Conv 5 Numba v2, 8 filtros por hilo             16x16   3.997 ms  err=3.67e-06  regs=72 shared=23616  ocupación=50%  ok
+Conv 5 PyTorch GPU   0.313 ms | PyTorch CPU     5.14 ms
+Densa 1 (lote 64) teselas  8    0.472 ms  err=9.16e-05  grid=(32, 8)
+C:\Users\melis\AppData\Local\Programs\Python\Python313\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 64 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Densa 1 (lote 64) teselas 16    0.422 ms  err=9.16e-05  grid=(16, 4)
+C:\Users\melis\AppData\Local\Programs\Python\Python313\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 16 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Densa 1 (lote 64) teselas 32    0.417 ms  err=9.16e-05  grid=(8, 2)
+Densa 1 (lote 256) teselas  8    1.570 ms  err=1.49e-04  grid=(32, 32)
+Densa 1 (lote 256) teselas 16    1.317 ms  err=1.49e-04  grid=(16, 16)
+C:\Users\melis\AppData\Local\Programs\Python\Python313\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 64 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+Densa 1 (lote 256) teselas 32    1.545 ms  err=1.49e-04  grid=(8, 8)
+
+Preparando el conjunto de prueba (pipeline de CPU con procesos)...
+C:\Users\melis\AppData\Local\Programs\Python\Python313\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 8 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+F5 lote 64: PyTorch GPU 252.5 ms acc=0.9785 | Numba 1053.4 ms acc=0.9785 coincide=1.0000 err=7.63e-05
+C:\Users\melis\AppData\Local\Programs\Python\Python313\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: [1mGrid size 32 will likely result in GPU under-utilization due to low occupancy.[0m
+  warn(errors.NumbaPerformanceWarning(msg))
+F5 lote 256: PyTorch GPU 297.2 ms acc=0.9785 | Numba 1037.0 ms acc=0.9785 coincide=1.0000 err=7.63e-05
+F5 PyTorch CPU 2317.9 ms acc=0.9785
+Guardado en C:\Users\melis\Documents\noCuarentena\semestre 8\paralela\paralela_proyecto3\benchmarks\kernels

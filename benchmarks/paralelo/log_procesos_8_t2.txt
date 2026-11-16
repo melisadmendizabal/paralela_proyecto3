@@ -1,0 +1,262 @@
+== numba.cuda.detect() ==
+Found 1 CUDA devices
+id 0    NVIDIA GeForce RTX 4050 Laptop GPU                              [SUPPORTED]
+                      Compute Capability: 8.9
+                           PCI Device ID: 0
+                              PCI Bus ID: 1
+                                    UUID: GPU-338e4873-6c24-5ae5-4fc0-7489dd76d066
+                                Watchdog: Enabled
+                            Compute Mode: WDDM
+             FP32/FP64 Performance Ratio: 64
+                            FP16 Support: Yes
+                            BF16 Support: Yes
+                             FP8 Support: Yes
+Summary:
+	1/1 devices are supported
+
+== PyTorch ==
+torch 2.6.0+cu124  cuda 12.4  cudnn 90100
+dispositivo: NVIDIA GeForce RTX 4050 Laptop GPU  capacidad (8, 9)
+
+== nvidia-smi ==
+Sun Nov 15 22:00:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.78                 KMD Version: 610.78        CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+| N/A   71C    P3             11W /   45W |       0MiB /   6141MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+
+===== calentamiento_01 (22:00:19) =====
+[22:00:22] -> F0_pool
+[22:00:24]    F0_pool: 2.54 s
+[22:00:24] -> F1_ingesta
+[22:00:27]    F1_ingesta: 2.60 s
+[22:00:27] -> EDA_promedios
+[22:00:28]    EDA_promedios: 0.99 s
+[22:00:28] -> F2_limpieza
+[22:00:31]    F2_limpieza: 2.76 s
+[22:00:31] -> EDA_brillo
+[22:00:33]    EDA_brillo: 2.50 s
+[22:00:33] -> F3_preprocesamiento
+[22:00:36]    F3_preprocesamiento: 2.62 s
+
+===== corrida_01 (22:00:38) =====
+[22:00:41] -> F0_pool
+[22:00:43]    F0_pool: 2.44 s
+[22:00:43] -> F1_ingesta
+[22:00:46]    F1_ingesta: 2.57 s
+[22:00:46] -> EDA_promedios
+[22:00:47]    EDA_promedios: 1.03 s
+[22:00:47] -> F2_limpieza
+[22:00:50]    F2_limpieza: 3.08 s
+[22:00:50] -> EDA_brillo
+[22:00:52]    EDA_brillo: 2.58 s
+[22:00:52] -> F3_preprocesamiento
+[22:00:55]    F3_preprocesamiento: 2.75 s
+  verificación de datos: {'identicos_al_secuencial': True, 'distintos': []}
+[22:00:57] -> G0_init_cuda
+[22:00:57]    G0_init_cuda: 0.18 s
+[22:00:57] -> G1_transferencia
+[22:00:58]    G1_transferencia: 0.69 s
+[22:00:58] -> F4_entrenamiento
+  época  1/15  loss=2.9111  acc=0.1602  val_loss=1.8743  val_acc=0.4580  (8.3 s)
+  época  2/15  loss=1.4127  acc=0.5481  val_loss=0.6685  val_acc=0.7988  (4.0 s)
+  época  3/15  loss=0.7172  acc=0.7569  val_loss=0.3608  val_acc=0.8812  (4.0 s)
+  época  4/15  loss=0.4692  acc=0.8378  val_loss=0.2506  val_acc=0.9249  (4.0 s)
+  época  5/15  loss=0.3147  acc=0.8901  val_loss=0.1892  val_acc=0.9425  (4.0 s)
+  época  6/15  loss=0.2629  acc=0.9098  val_loss=0.1825  val_acc=0.9379  (4.1 s)
+  época  7/15  loss=0.1961  acc=0.9323  val_loss=0.0959  val_acc=0.9724  (4.1 s)
+  época  8/15  loss=0.1534  acc=0.9462  val_loss=0.0850  val_acc=0.9716  (4.0 s)
+  época  9/15  loss=0.1398  acc=0.9537  val_loss=0.0950  val_acc=0.9705  (4.0 s)
+  época 10/15  loss=0.1319  acc=0.9551  val_loss=0.0636  val_acc=0.9816  (4.1 s)
+  época 11/15  loss=0.1054  acc=0.9666  val_loss=0.0551  val_acc=0.9831  (4.1 s)
+  época 12/15  loss=0.0984  acc=0.9666  val_loss=0.0771  val_acc=0.9762  (4.1 s)
+  época 13/15  loss=0.1023  acc=0.9665  val_loss=0.0644  val_acc=0.9762  (4.1 s)
+  época 14/15  loss=0.0839  acc=0.9681  val_loss=0.0559  val_acc=0.9835  (4.1 s)
+  época 15/15  loss=0.0852  acc=0.9707  val_loss=0.0595  val_acc=0.9828  (4.1 s)
+[22:02:03]    F4_entrenamiento: 65.88 s
+[22:02:03] -> F5_evaluacion
+[22:02:04]    F5_evaluacion: 0.28 s
+  test_accuracy=0.9831  test_loss=0.0611
+
+===== corrida_02 (22:02:05) =====
+[22:02:09] -> F0_pool
+[22:02:11]    F0_pool: 2.50 s
+[22:02:11] -> F1_ingesta
+[22:02:14]    F1_ingesta: 2.57 s
+[22:02:14] -> EDA_promedios
+[22:02:15]    EDA_promedios: 1.02 s
+[22:02:15] -> F2_limpieza
+[22:02:17]    F2_limpieza: 2.76 s
+[22:02:17] -> EDA_brillo
+[22:02:20]    EDA_brillo: 2.66 s
+[22:02:20] -> F3_preprocesamiento
+[22:02:23]    F3_preprocesamiento: 2.75 s
+[22:02:23] -> G0_init_cuda
+[22:02:24]    G0_init_cuda: 0.67 s
+[22:02:24] -> G1_transferencia
+[22:02:25]    G1_transferencia: 0.66 s
+[22:02:25] -> F4_entrenamiento
+  época  1/15  loss=2.9224  acc=0.1556  val_loss=1.9023  val_acc=0.4588  (8.1 s)
+  época  2/15  loss=1.4981  acc=0.5245  val_loss=0.8637  val_acc=0.7317  (4.1 s)
+  época  3/15  loss=0.8177  acc=0.7286  val_loss=0.4634  val_acc=0.8639  (4.1 s)
+  época  4/15  loss=0.5336  acc=0.8220  val_loss=0.2908  val_acc=0.9164  (4.1 s)
+  época  5/15  loss=0.3878  acc=0.8658  val_loss=0.2047  val_acc=0.9387  (4.1 s)
+  época  6/15  loss=0.2994  acc=0.8981  val_loss=0.1833  val_acc=0.9421  (4.1 s)
+  época  7/15  loss=0.2672  acc=0.9086  val_loss=0.1225  val_acc=0.9613  (4.1 s)
+  época  8/15  loss=0.1873  acc=0.9346  val_loss=0.1410  val_acc=0.9544  (4.1 s)
+  época  9/15  loss=0.1623  acc=0.9435  val_loss=0.1037  val_acc=0.9728  (4.3 s)
+  época 10/15  loss=0.1379  acc=0.9538  val_loss=0.0916  val_acc=0.9701  (4.1 s)
+  época 11/15  loss=0.1313  acc=0.9552  val_loss=0.0811  val_acc=0.9785  (4.1 s)
+  época 12/15  loss=0.1168  acc=0.9606  val_loss=0.0886  val_acc=0.9785  (4.2 s)
+  época 13/15  loss=0.1004  acc=0.9650  val_loss=0.0938  val_acc=0.9766  (4.1 s)
+  época 14/15  loss=0.1003  acc=0.9661  val_loss=0.0707  val_acc=0.9789  (4.1 s)
+  época 15/15  loss=0.0936  acc=0.9676  val_loss=0.0575  val_acc=0.9812  (4.1 s)
+[22:03:31]    F4_entrenamiento: 66.72 s
+[22:03:31] -> F5_evaluacion
+[22:03:32]    F5_evaluacion: 0.28 s
+  test_accuracy=0.9805  test_loss=0.0649
+
+===== corrida_03 (22:03:33) =====
+[22:03:37] -> F0_pool
+[22:03:40]    F0_pool: 2.73 s
+[22:03:40] -> F1_ingesta
+[22:03:43]    F1_ingesta: 2.90 s
+[22:03:43] -> EDA_promedios
+[22:03:44]    EDA_promedios: 1.05 s
+[22:03:44] -> F2_limpieza
+[22:03:47]    F2_limpieza: 2.89 s
+[22:03:47] -> EDA_brillo
+[22:03:49]    EDA_brillo: 2.46 s
+[22:03:49] -> F3_preprocesamiento
+[22:03:52]    F3_preprocesamiento: 2.75 s
+[22:03:52] -> G0_init_cuda
+[22:03:53]    G0_init_cuda: 0.57 s
+[22:03:53] -> G1_transferencia
+[22:03:53]    G1_transferencia: 0.64 s
+[22:03:53] -> F4_entrenamiento
+  época  1/15  loss=2.9744  acc=0.1418  val_loss=1.9649  val_acc=0.4055  (8.0 s)
+  época  2/15  loss=1.5984  acc=0.4927  val_loss=0.8944  val_acc=0.7317  (4.1 s)
+  época  3/15  loss=0.8682  acc=0.7086  val_loss=0.5180  val_acc=0.8425  (4.1 s)
+  época  4/15  loss=0.5692  acc=0.8104  val_loss=0.3743  val_acc=0.8754  (4.1 s)
+  época  5/15  loss=0.4050  acc=0.8610  val_loss=0.1960  val_acc=0.9364  (4.2 s)
+  época  6/15  loss=0.2972  acc=0.9018  val_loss=0.1760  val_acc=0.9471  (4.2 s)
+  época  7/15  loss=0.2479  acc=0.9175  val_loss=0.1641  val_acc=0.9425  (4.1 s)
+  época  8/15  loss=0.2037  acc=0.9323  val_loss=0.1043  val_acc=0.9682  (4.2 s)
+  época  9/15  loss=0.1911  acc=0.9356  val_loss=0.1018  val_acc=0.9682  (4.2 s)
+  época 10/15  loss=0.1503  acc=0.9464  val_loss=0.0682  val_acc=0.9774  (4.2 s)
+  época 11/15  loss=0.1411  acc=0.9508  val_loss=0.0669  val_acc=0.9797  (4.2 s)
+  época 12/15  loss=0.1055  acc=0.9644  val_loss=0.0763  val_acc=0.9755  (4.2 s)
+  época 13/15  loss=0.1085  acc=0.9625  val_loss=0.0759  val_acc=0.9785  (4.2 s)
+  época 14/15  loss=0.0915  acc=0.9698  val_loss=0.0786  val_acc=0.9755  (4.3 s)
+  época 15/15  loss=0.0941  acc=0.9701  val_loss=0.0764  val_acc=0.9782  (4.1 s)
+[22:05:01]    F4_entrenamiento: 67.36 s
+[22:05:01] -> F5_evaluacion
+[22:05:01]    F5_evaluacion: 0.30 s
+  test_accuracy=0.9778  test_loss=0.0733
+
+===== corrida_04 (22:05:03) =====
+[22:05:07] -> F0_pool
+[22:05:10]    F0_pool: 2.95 s
+[22:05:10] -> F1_ingesta
+[22:05:17]    F1_ingesta: 6.56 s
+[22:05:17] -> EDA_promedios
+[22:05:18]    EDA_promedios: 1.12 s
+[22:05:18] -> F2_limpieza
+[22:05:22]    F2_limpieza: 3.78 s
+[22:05:22] -> EDA_brillo
+[22:05:24]    EDA_brillo: 2.76 s
+[22:05:24] -> F3_preprocesamiento
+[22:05:27]    F3_preprocesamiento: 3.05 s
+[22:05:28] -> G0_init_cuda
+[22:05:28]    G0_init_cuda: 0.30 s
+[22:05:28] -> G1_transferencia
+[22:05:29]    G1_transferencia: 0.68 s
+[22:05:29] -> F4_entrenamiento
+  época  1/15  loss=2.9216  acc=0.1579  val_loss=1.7775  val_acc=0.4803  (9.2 s)
+  época  2/15  loss=1.3950  acc=0.5566  val_loss=0.6887  val_acc=0.7919  (4.1 s)
+  época  3/15  loss=0.7364  acc=0.7587  val_loss=0.3903  val_acc=0.8885  (4.1 s)
+  época  4/15  loss=0.4720  acc=0.8447  val_loss=0.2483  val_acc=0.9195  (4.1 s)
+  época  5/15  loss=0.3296  acc=0.8850  val_loss=0.1736  val_acc=0.9440  (4.1 s)
+  época  6/15  loss=0.2609  acc=0.9097  val_loss=0.1890  val_acc=0.9421  (4.2 s)
+  época  7/15  loss=0.2070  acc=0.9268  val_loss=0.1602  val_acc=0.9483  (4.2 s)
+  época  8/15  loss=0.1601  acc=0.9450  val_loss=0.0914  val_acc=0.9686  (4.2 s)
+  época  9/15  loss=0.1386  acc=0.9531  val_loss=0.0710  val_acc=0.9774  (4.2 s)
+  época 10/15  loss=0.1202  acc=0.9593  val_loss=0.1019  val_acc=0.9670  (4.2 s)
+  época 11/15  loss=0.1257  acc=0.9562  val_loss=0.0860  val_acc=0.9759  (4.1 s)
+  época 12/15  loss=0.1075  acc=0.9649  val_loss=0.0844  val_acc=0.9739  (4.2 s)
+  época 13/15  loss=0.0868  acc=0.9692  val_loss=0.0771  val_acc=0.9812  (4.2 s)
+  época 14/15  loss=0.0952  acc=0.9666  val_loss=0.0557  val_acc=0.9801  (4.2 s)
+  época 15/15  loss=0.0804  acc=0.9718  val_loss=0.0573  val_acc=0.9862  (4.1 s)
+[22:06:37]    F4_entrenamiento: 68.61 s
+[22:06:37] -> F5_evaluacion
+[22:06:38]    F5_evaluacion: 0.29 s
+  test_accuracy=0.9785  test_loss=0.0622
+
+===== corrida_05 (22:06:39) =====
+[22:06:43] -> F0_pool
+[22:06:46]    F0_pool: 2.54 s
+[22:06:46] -> F1_ingesta
+[22:06:50]    F1_ingesta: 3.65 s
+[22:06:50] -> EDA_promedios
+[22:06:51]    EDA_promedios: 1.02 s
+[22:06:51] -> F2_limpieza
+[22:06:53]    F2_limpieza: 2.82 s
+[22:06:53] -> EDA_brillo
+[22:06:56]    EDA_brillo: 2.48 s
+[22:06:56] -> F3_preprocesamiento
+[22:06:59]    F3_preprocesamiento: 2.69 s
+[22:06:59] -> G0_init_cuda
+[22:06:59]    G0_init_cuda: 0.25 s
+[22:06:59] -> G1_transferencia
+[22:07:00]    G1_transferencia: 0.79 s
+[22:07:00] -> F4_entrenamiento
+  época  1/15  loss=2.9603  acc=0.1458  val_loss=1.8557  val_acc=0.4412  (8.2 s)
+  época  2/15  loss=1.4615  acc=0.5307  val_loss=0.7649  val_acc=0.7815  (4.1 s)
+  época  3/15  loss=0.7832  acc=0.7362  val_loss=0.3751  val_acc=0.8881  (4.1 s)
+  época  4/15  loss=0.5001  acc=0.8294  val_loss=0.2946  val_acc=0.9076  (4.2 s)
+  época  5/15  loss=0.3625  acc=0.8749  val_loss=0.2039  val_acc=0.9348  (4.1 s)
+  época  6/15  loss=0.2864  acc=0.9006  val_loss=0.1477  val_acc=0.9521  (4.1 s)
+  época  7/15  loss=0.2277  acc=0.9192  val_loss=0.1107  val_acc=0.9670  (4.1 s)
+  época  8/15  loss=0.1888  acc=0.9359  val_loss=0.1154  val_acc=0.9667  (4.1 s)
+  época  9/15  loss=0.1682  acc=0.9439  val_loss=0.1077  val_acc=0.9682  (4.1 s)
+  época 10/15  loss=0.1515  acc=0.9494  val_loss=0.1473  val_acc=0.9555  (4.1 s)
+  época 11/15  loss=0.1327  acc=0.9558  val_loss=0.1772  val_acc=0.9463  (4.1 s)
+  época 12/15  loss=0.1130  acc=0.9607  val_loss=0.0769  val_acc=0.9739  (4.1 s)
+  época 13/15  loss=0.1167  acc=0.9616  val_loss=0.0833  val_acc=0.9759  (4.1 s)
+  época 14/15  loss=0.0929  acc=0.9689  val_loss=0.0889  val_acc=0.9828  (4.1 s)
+  época 15/15  loss=0.0977  acc=0.9687  val_loss=0.1160  val_acc=0.9686  (4.1 s)
+[22:08:07]    F4_entrenamiento: 66.84 s
+[22:08:07] -> F5_evaluacion
+[22:08:07]    F5_evaluacion: 0.28 s
+  test_accuracy=0.9693  test_loss=0.1089
+
+Resumen (s):
+               fase  n  media_s  desv_s  min_s  max_s  pct_del_total
+            F0_pool  5    2.633   0.209  2.441  2.949          3.125
+         F1_ingesta  5    3.649   1.686  2.567  6.559          4.332
+      EDA_promedios  5    1.047   0.044  1.015  1.123          1.243
+        F2_limpieza  5    3.068   0.417  2.764  3.782          3.642
+         EDA_brillo  5    2.586   0.125  2.458  2.758          3.070
+F3_preprocesamiento  5    2.798   0.146  2.685  3.054          3.322
+       G0_init_cuda  5    0.395   0.214  0.180  0.671          0.469
+   G1_transferencia  5    0.692   0.057  0.645  0.790          0.821
+   F4_entrenamiento  5   67.081   1.005 65.878 68.609         79.638
+      F5_evaluacion  5    0.285   0.009  0.275  0.299          0.339
+      total_fases_s  5   84.233   3.388 81.462 90.103        100.000
+      total_reloj_s  5   85.183   3.183 83.305 90.816        100.000

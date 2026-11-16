@@ -35,6 +35,7 @@ from . import config, datos, eda
 from .entrenamiento import CL, a_tensores
 from .medicion import guardar_json, info_entorno
 from .modelo import CNN2
+from .energia import desactivar_ecoqos
 
 DIR = config.DIR_BENCHMARKS / "perfil"
 REPETICIONES = 3
@@ -339,6 +340,7 @@ def main():
     p.add_argument("--lotes", type=int, default=20, help="lotes para perfilar el entrenamiento")
     p.add_argument("--sin-funciones", action="store_true", help="omitir la medición A (corrida completa)")
     args = p.parse_args()
+    desactivar_ecoqos()
     DIR.mkdir(parents=True, exist_ok=True)
     guardar_json(info_entorno(), DIR / "entorno.json")
 

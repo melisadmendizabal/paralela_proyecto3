@@ -1,0 +1,2 @@
+corrida,tipo,inicio,datos,trabajadores,gpu,F0_pool,F1_ingesta,EDA_promedios,F2_limpieza,EDA_brillo,F3_preprocesamiento,G0_init_cuda,G1_transferencia,F4_entrenamiento,F5_evaluacion,total_fases_s,total_reloj_s,test_accuracy,test_loss,epochs,ecoqos_desactivado
+corrida_01,medicion,2026-11-15T23:58:38,procesos,8,t1,2.029,5.548,0.88,2.27,1.603,2.012,0.651,0.122,61.992,0.258,77.365,79.611,0.9727865082407052,0.07927169595106483,15,True

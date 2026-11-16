@@ -1,0 +1,41 @@
+== numba.cuda.detect() ==
+Found 1 CUDA devices
+id 0    NVIDIA GeForce RTX 4050 Laptop GPU                              [SUPPORTED]
+                      Compute Capability: 8.9
+                           PCI Device ID: 0
+                              PCI Bus ID: 1
+                                    UUID: GPU-338e4873-6c24-5ae5-4fc0-7489dd76d066
+                                Watchdog: Enabled
+                            Compute Mode: WDDM
+             FP32/FP64 Performance Ratio: 64
+                            FP16 Support: Yes
+                            BF16 Support: Yes
+                             FP8 Support: Yes
+Summary:
+	1/1 devices are supported
+
+== PyTorch ==
+torch 2.6.0+cu124  cuda 12.4  cudnn 90100
+dispositivo: NVIDIA GeForce RTX 4050 Laptop GPU  capacidad (8, 9)
+
+== nvidia-smi ==
+Sun Nov 15 22:00:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.78                 KMD Version: 610.78        CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+| N/A   71C    P3             11W /   45W |       0MiB /   6141MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+

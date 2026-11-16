@@ -32,6 +32,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 from . import config, datos, eda, graficas
 from .entrenamiento import a_tensores, entrenar, evaluar
+from .energia import desactivar_ecoqos
 from .medicion import Cronometro, MonitorRecursos, guardar_json, info_entorno
 from .modelo import construir_modelo, contar_parametros
 
@@ -119,7 +120,7 @@ def ejecutar_pipeline(corrida, dir_corrida, args, entrenar_modelo=True):
         (dir_corrida / "reporte_clasificacion.txt").write_text(reporte, encoding="utf-8")
         if args.guardar_modelo:
             config.DIR_MODELOS.mkdir(exist_ok=True)
-            torch.save(modelo.state_dict(), config.DIR_MODELOS / "cnn2_secuencial_cpu.pt")
+            torch.save(modelo.state_dict(), config.DIR_MODELOS / f"cnn2_secuencial_cpu_{args.epochs}ep.pt")
         graficas.curvas_entrenamiento(pd.DataFrame(historia), dir_corrida / "curvas_entrenamiento.png",
                                       f"CNN 2 en CPU — {corrida}")
         print(f"  test_accuracy={test_acc:.4f}  test_loss={test_loss:.4f}", flush=True)
@@ -184,6 +185,7 @@ def main():
     p.add_argument("--salida", default=str(config.DIR_BENCHMARKS / "secuencial"))
     p.add_argument("--guardar-modelo", action="store_true", default=True)
     args = p.parse_args()
+    ecoqos = desactivar_ecoqos()
 
     if args.hilos_torch:
         torch.set_num_threads(args.hilos_torch)
@@ -191,6 +193,7 @@ def main():
     dir_salida.mkdir(parents=True, exist_ok=True)
     entorno = info_entorno()
     entorno["argumentos"] = vars(args)
+    entorno["ecoqos_desactivado"] = ecoqos
     guardar_json(entorno, dir_salida / "entorno.json")
     print("Entorno:", {k: entorno[k] for k in ("cpu", "nucleos_fisicos", "nucleos_logicos", "torch_hilos_cpu", "gpu")
                        if k in entorno}, flush=True)

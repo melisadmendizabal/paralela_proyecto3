@@ -1,0 +1,136 @@
+{
+  "corrida": "corrida_05",
+  "inicio": "2026-11-15T21:59:33",
+  "datos": "procesos",
+  "trabajadores": 8,
+  "gpu": "t3",
+  "limpieza": {
+    "imagenes_hash_repetido": 22,
+    "grupos_hash_repetido": 11,
+    "duplicados_eliminados": 9,
+    "submuestra_final": 17391
+  },
+  "particion": {
+    "train": 12173,
+    "val": 2609,
+    "test": 2609
+  },
+  "gil_activo": true,
+  "dispositivo": {
+    "nombre": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "capacidad": "8.9",
+    "cuda": "12.4",
+    "cudnn": 90100
+  },
+  "modelo": {
+    "nombre": "cnn2",
+    "parametros": 2244285,
+    "epochs": 15,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "dropout": 0.5,
+    "precision": "mixta (FP16)"
+  },
+  "test": {
+    "loss": 0.04853926366569896,
+    "accuracy": 0.9862016098121886,
+    "val_loss_final": 0.056490271244071,
+    "val_accuracy_final": 0.9823687236489076
+  },
+  "memoria_gpu_max_mb": 1157.5126953125,
+  "tiempos_s": {
+    "F0_pool": 2.4488887000188697,
+    "F1_ingesta": 2.4025486999889836,
+    "EDA_promedios": 0.9626795999938622,
+    "F2_limpieza": 2.7166919999872334,
+    "EDA_brillo": 2.466799499990884,
+    "F3_preprocesamiento": 2.6916284000035375,
+    "G0_init_cuda": 0.33653440000489354,
+    "G1_transferencia": 0.0733120999939274,
+    "F4_entrenamiento": 23.63166079999064,
+    "F5_evaluacion": 0.09376600000541657
+  },
+  "tiempo_total_s": 38.46525869998732,
+  "recursos_por_fase": {
+    "F0_pool": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 60.3,
+      "cpu_proceso_pct_prom": 3.1,
+      "nucleos_sobre_50pct_prom": 11.0,
+      "ram_proceso_mb_max": 548.7,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F1_ingesta": {
+      "muestras": 2,
+      "cpu_total_pct_prom": 52.0,
+      "cpu_proceso_pct_prom": 8.3,
+      "nucleos_sobre_50pct_prom": 10.0,
+      "ram_proceso_mb_max": 581.5,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "EDA_promedios": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 57.8,
+      "cpu_proceso_pct_prom": 15.4,
+      "nucleos_sobre_50pct_prom": 11.0,
+      "ram_proceso_mb_max": 590.7,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F2_limpieza": {
+      "muestras": 2,
+      "cpu_total_pct_prom": 57.7,
+      "cpu_proceso_pct_prom": 2.8,
+      "nucleos_sobre_50pct_prom": 10.5,
+      "ram_proceso_mb_max": 592.3,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "EDA_brillo": {
+      "muestras": 2,
+      "cpu_total_pct_prom": 57.9,
+      "cpu_proceso_pct_prom": 3.3,
+      "nucleos_sobre_50pct_prom": 11.0,
+      "ram_proceso_mb_max": 592.6,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F3_preprocesamiento": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 57.2,
+      "cpu_proceso_pct_prom": 5.5,
+      "nucleos_sobre_50pct_prom": 11.0,
+      "ram_proceso_mb_max": 592.9,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "entre_fases": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 58.1,
+      "cpu_proceso_pct_prom": 10.9,
+      "nucleos_sobre_50pct_prom": 13.0,
+      "ram_proceso_mb_max": 796.8,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F4_entrenamiento": {
+      "muestras": 23,
+      "cpu_total_pct_prom": 14.0,
+      "cpu_proceso_pct_prom": 93.4,
+      "nucleos_sobre_50pct_prom": 2.0,
+      "ram_proceso_mb_max": 1676.2,
+      "gpu_util_pct_prom": 90.1,
+      "gpu_util_pct_max": 96,
+      "gpu_mem_usada_mb_max": 1347.6
+    }
+  }
+}

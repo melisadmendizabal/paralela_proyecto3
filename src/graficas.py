@@ -17,11 +17,14 @@ SECUENCIAL = LinearSegmentedColormap.from_list(
     "azul", ["#fcfcfb", "#cde2fb", "#86b6ef", "#3987e5", "#256abf", "#184f95", "#0d366b"])
 
 NOMBRES_FASE = {
+    "F0_pool": "F0 Creación del pool de CPU",
     "F1_ingesta": "F1 Ingesta (metadatos)",
     "EDA_promedios": "EDA Imagen promedio + distancias",
     "F2_limpieza": "F2 Submuestreo + hash + duplicados",
     "EDA_brillo": "EDA Brillo por clase",
     "F3_preprocesamiento": "F3 Split + carga + resize + normalización",
+    "G0_init_cuda": "G0 Inicialización de CUDA",
+    "G1_transferencia": "G1 Transferencia a GPU + normalización",
     "F4_entrenamiento": "F4 Entrenamiento",
     "F5_evaluacion": "F5 Evaluación en prueba",
 }
@@ -117,7 +120,7 @@ def graficas_de_corrida(dir_corrida, version):
     nombre = dir_corrida.name
     recursos_corrida(recursos, dir_corrida / "uso_recursos.png",
                      f"Versión {version} — uso de CPU por núcleo y de GPU ({nombre})")
-    datos = recursos[recursos["fase"].isin(["F1_ingesta", "EDA_promedios", "F2_limpieza",
+    datos = recursos[recursos["fase"].isin(["F0_pool", "F1_ingesta", "EDA_promedios", "F2_limpieza",
                                             "EDA_brillo", "F3_preprocesamiento"])]
     if len(datos):
         recursos_corrida(recursos, dir_corrida / "uso_recursos_fases_datos.png",

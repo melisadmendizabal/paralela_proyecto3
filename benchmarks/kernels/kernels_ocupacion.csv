@@ -1,0 +1,42 @@
+capa,implementacion,bloque,grid,bloques_lanzados,registros_por_hilo,memoria_compartida_B,bloques_por_SM,ocupacion,lanzamiento
+Conv 1,"Numba v1, compartida",8x8,"(8, 8, 2048)",131072,72,2704,14,0.5833333333333334,ok
+Conv 1,"Numba v1, compartida",16x16,"(4, 4, 2048)",32768,72,3600,3,0.5,ok
+Conv 1,"Numba v1, compartida, máx. 40 registros",16x16,"(4, 4, 2048)",32768,40,3600,6,1.0,ok
+Conv 1,"Numba v1, compartida",32x32,"(2, 2, 2048)",8192,72,6928,0,0.0,CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 1,"Numba v1, compartida, máx. 64 registros",32x32,"(2, 2, 2048)",8192,64,6928,1,0.6666666666666666,ok
+Conv 1,"Numba, sin compartida",16x16,"(4, 4, 2048)",32768,33,0,6,1.0,ok
+Conv 1,"Numba v2, 8 filtros por hilo",16x16,"(4, 4, 256)",4096,72,23616,3,0.5,ok
+Conv 2,"Numba v1, compartida",8x8,"(8, 8, 2048)",131072,72,2704,14,0.5833333333333334,ok
+Conv 2,"Numba v1, compartida",16x16,"(4, 4, 2048)",32768,72,3600,3,0.5,ok
+Conv 2,"Numba v1, compartida, máx. 40 registros",16x16,"(4, 4, 2048)",32768,40,3600,6,1.0,ok
+Conv 2,"Numba v1, compartida",32x32,"(2, 2, 2048)",8192,72,6928,0,0.0,CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 2,"Numba v1, compartida, máx. 64 registros",32x32,"(2, 2, 2048)",8192,64,6928,1,0.6666666666666666,ok
+Conv 2,"Numba, sin compartida",16x16,"(4, 4, 2048)",32768,33,0,6,1.0,ok
+Conv 2,"Numba v2, 8 filtros por hilo",16x16,"(4, 4, 256)",4096,72,23616,3,0.5,ok
+Conv 3,"Numba v1, compartida",8x8,"(4, 4, 4096)",65536,72,2704,14,0.5833333333333334,ok
+Conv 3,"Numba v1, compartida",16x16,"(2, 2, 4096)",16384,72,3600,3,0.5,ok
+Conv 3,"Numba v1, compartida, máx. 40 registros",16x16,"(2, 2, 4096)",16384,40,3600,6,1.0,ok
+Conv 3,"Numba v1, compartida",32x32,"(1, 1, 4096)",4096,72,6928,0,0.0,CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 3,"Numba v1, compartida, máx. 64 registros",32x32,"(1, 1, 4096)",4096,64,6928,1,0.6666666666666666,ok
+Conv 3,"Numba, sin compartida",16x16,"(2, 2, 4096)",16384,33,0,6,1.0,ok
+Conv 3,"Numba v2, 8 filtros por hilo",16x16,"(2, 2, 512)",2048,72,23616,3,0.5,ok
+Conv 4,"Numba v1, compartida",8x8,"(4, 4, 4096)",65536,72,2704,14,0.5833333333333334,ok
+Conv 4,"Numba v1, compartida",16x16,"(2, 2, 4096)",16384,72,3600,3,0.5,ok
+Conv 4,"Numba v1, compartida, máx. 40 registros",16x16,"(2, 2, 4096)",16384,40,3600,6,1.0,ok
+Conv 4,"Numba v1, compartida",32x32,"(1, 1, 4096)",4096,72,6928,0,0.0,CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 4,"Numba v1, compartida, máx. 64 registros",32x32,"(1, 1, 4096)",4096,64,6928,1,0.6666666666666666,ok
+Conv 4,"Numba, sin compartida",16x16,"(2, 2, 4096)",16384,33,0,6,1.0,ok
+Conv 4,"Numba v2, 8 filtros por hilo",16x16,"(2, 2, 512)",2048,72,23616,3,0.5,ok
+Conv 5,"Numba v1, compartida",8x8,"(2, 2, 8192)",32768,72,2704,14,0.5833333333333334,ok
+Conv 5,"Numba v1, compartida",16x16,"(1, 1, 8192)",8192,72,3600,3,0.5,ok
+Conv 5,"Numba v1, compartida, máx. 40 registros",16x16,"(1, 1, 8192)",8192,40,3600,6,1.0,ok
+Conv 5,"Numba v1, compartida",32x32,"(1, 1, 8192)",8192,72,6928,0,0.0,CUDAError: CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES
+Conv 5,"Numba v1, compartida, máx. 64 registros",32x32,"(1, 1, 8192)",8192,64,6928,1,0.6666666666666666,ok
+Conv 5,"Numba, sin compartida",16x16,"(1, 1, 8192)",8192,33,0,6,1.0,ok
+Conv 5,"Numba v2, 8 filtros por hilo",16x16,"(1, 1, 1024)",1024,72,23616,3,0.5,ok
+Densa 1 (lote 64),"Numba, teselas",8x8,"(32, 8)",256,40,544,24,1.0,
+Densa 1 (lote 64),"Numba, teselas",16x16,"(16, 4)",64,40,2112,6,1.0,
+Densa 1 (lote 64),"Numba, teselas",32x32,"(8, 2)",16,40,8320,1,0.6666666666666666,
+Densa 1 (lote 256),"Numba, teselas",8x8,"(32, 32)",1024,40,544,24,1.0,
+Densa 1 (lote 256),"Numba, teselas",16x16,"(16, 16)",256,40,2112,6,1.0,
+Densa 1 (lote 256),"Numba, teselas",32x32,"(8, 8)",64,40,8320,1,0.6666666666666666,

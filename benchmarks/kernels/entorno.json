@@ -1,0 +1,10 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "numba_cuda_detectado": true,
+  "ecoqos_desactivado": true,
+  "repeticiones": 20,
+  "tf32": false,
+  "modelo": "C:\\Users\\melis\\Documents\\noCuarentena\\semestre 8\\paralela\\paralela_proyecto3\\modelos\\cnn2_paralelo_t1_15ep.pt"
+}

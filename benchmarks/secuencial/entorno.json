@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-15T15:51:16",
+  "fecha": "2026-11-15T22:36:36",
   "sistema": "Windows 11 (10.0.26200)",
   "python": "3.13.16",
   "cpu": "13th Gen Intel(R) Core(TM) i7-13620H",
@@ -30,5 +30,6 @@
     "intervalo": 1.0,
     "salida": "C:\\Users\\melis\\Documents\\noCuarentena\\semestre 8\\paralela\\paralela_proyecto3\\benchmarks\\secuencial",
     "guardar_modelo": true
-  }
+  },
+  "ecoqos_desactivado": true
 }

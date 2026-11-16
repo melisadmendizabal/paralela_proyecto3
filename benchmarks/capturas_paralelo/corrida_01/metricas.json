@@ -1,0 +1,151 @@
+{
+  "corrida": "corrida_01",
+  "inicio": "2026-11-15T23:58:38",
+  "datos": "procesos",
+  "trabajadores": 8,
+  "gpu": "t1",
+  "limpieza": {
+    "imagenes_hash_repetido": 22,
+    "grupos_hash_repetido": 11,
+    "duplicados_eliminados": 9,
+    "submuestra_final": 17391
+  },
+  "particion": {
+    "train": 12173,
+    "val": 2609,
+    "test": 2609
+  },
+  "gil_activo": true,
+  "verificacion_datos": {
+    "identicos_al_secuencial": true,
+    "distintos": []
+  },
+  "dispositivo": {
+    "nombre": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "capacidad": "8.9",
+    "cuda": "12.4",
+    "cudnn": 90100
+  },
+  "verificacion_normalizacion_gpu": true,
+  "modelo": {
+    "nombre": "cnn2",
+    "parametros": 2244285,
+    "epochs": 15,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "dropout": 0.5,
+    "precision": "FP32"
+  },
+  "test": {
+    "loss": 0.07927169595106483,
+    "accuracy": 0.9727865082407052,
+    "val_loss_final": 0.09424372037373635,
+    "val_accuracy_final": 0.9712533537753929
+  },
+  "memoria_gpu_max_mb": 1563.8466796875,
+  "tiempos_s": {
+    "F0_pool": 2.0293584000028204,
+    "F1_ingesta": 5.54816460001166,
+    "EDA_promedios": 0.8800598999951035,
+    "F2_limpieza": 2.270243999984814,
+    "EDA_brillo": 1.603225399972871,
+    "F3_preprocesamiento": 2.0117742999864276,
+    "G0_init_cuda": 0.6509178999986034,
+    "G1_transferencia": 0.1220921000058297,
+    "F4_entrenamiento": 61.99191059998702,
+    "F5_evaluacion": 0.25761070000589825
+  },
+  "tiempo_total_s": 79.61116560001392,
+  "recursos_por_fase": {
+    "F0_pool": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 66.1,
+      "cpu_proceso_pct_prom": 6.3,
+      "nucleos_sobre_50pct_prom": 13.0,
+      "ram_proceso_mb_max": 549.0,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F1_ingesta": {
+      "muestras": 4,
+      "cpu_total_pct_prom": 47.1,
+      "cpu_proceso_pct_prom": 5.5,
+      "nucleos_sobre_50pct_prom": 8.5,
+      "ram_proceso_mb_max": 583.9,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "EDA_promedios": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 40.8,
+      "cpu_proceso_pct_prom": 15.4,
+      "nucleos_sobre_50pct_prom": 7.0,
+      "ram_proceso_mb_max": 592.7,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F2_limpieza": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 52.2,
+      "cpu_proceso_pct_prom": 4.5,
+      "nucleos_sobre_50pct_prom": 10.0,
+      "ram_proceso_mb_max": 593.5,
+      "gpu_util_pct_prom": null,
+      "gpu_util_pct_max": null,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "EDA_brillo": {
+      "muestras": 2,
+      "cpu_total_pct_prom": 56.3,
+      "cpu_proceso_pct_prom": 2.3,
+      "nucleos_sobre_50pct_prom": 11.5,
+      "ram_proceso_mb_max": 593.8,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F3_preprocesamiento": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 61.8,
+      "cpu_proceso_pct_prom": 6.8,
+      "nucleos_sobre_50pct_prom": 12.0,
+      "ram_proceso_mb_max": 594.1,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "entre_fases": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 63.8,
+      "cpu_proceso_pct_prom": 35.6,
+      "nucleos_sobre_50pct_prom": 14.0,
+      "ram_proceso_mb_max": 1482.5,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "G0_init_cuda": {
+      "muestras": 1,
+      "cpu_total_pct_prom": 38.3,
+      "cpu_proceso_pct_prom": 66.3,
+      "nucleos_sobre_50pct_prom": 5.0,
+      "ram_proceso_mb_max": 817.1,
+      "gpu_util_pct_prom": 0.0,
+      "gpu_util_pct_max": 0,
+      "gpu_mem_usada_mb_max": 221.0
+    },
+    "F4_entrenamiento": {
+      "muestras": 61,
+      "cpu_total_pct_prom": 16.3,
+      "cpu_proceso_pct_prom": 40.3,
+      "nucleos_sobre_50pct_prom": 1.2,
+      "ram_proceso_mb_max": 1497.3,
+      "gpu_util_pct_prom": 94.2,
+      "gpu_util_pct_max": 100,
+      "gpu_mem_usada_mb_max": 1999.6
+    }
+  }
+}

@@ -1,0 +1,185 @@
+Entorno: {'cpu': '13th Gen Intel(R) Core(TM) i7-13620H', 'nucleos_fisicos': 10, 'nucleos_logicos': 16, 'torch_hilos_cpu': 10, 'gpu': 'NVIDIA GeForce RTX 4050 Laptop GPU'}
+
+===== calentamiento_01 (15:51:16) =====
+[15:51:16] -> F1_ingesta
+[15:51:37]    F1_ingesta: 20.95 s
+[15:51:37] -> EDA_promedios
+[15:51:41]    EDA_promedios: 3.53 s
+[15:51:41] -> F2_limpieza
+[15:51:52]    F2_limpieza: 11.66 s
+[15:51:52] -> EDA_brillo
+[15:52:03]    EDA_brillo: 10.80 s
+[15:52:03] -> F3_preprocesamiento
+[15:52:14]    F3_preprocesamiento: 11.31 s
+
+===== corrida_01 (15:52:15) =====
+[15:52:15] -> F1_ingesta
+[15:52:23]    F1_ingesta: 8.85 s
+[15:52:23] -> EDA_promedios
+[15:52:27]    EDA_promedios: 3.28 s
+[15:52:27] -> F2_limpieza
+[15:52:38]    F2_limpieza: 10.92 s
+[15:52:38] -> EDA_brillo
+[15:52:47]    EDA_brillo: 9.81 s
+[15:52:47] -> F3_preprocesamiento
+[15:52:59]    F3_preprocesamiento: 11.19 s
+[15:52:59] -> F4_entrenamiento
+  época  1/15  loss=2.8965  acc=0.1694  val_loss=1.6865  val_acc=0.4944  (38.5 s)
+  época  2/15  loss=1.2960  acc=0.5852  val_loss=0.5665  val_acc=0.8367  (38.4 s)
+  época  3/15  loss=0.6407  acc=0.7818  val_loss=0.3492  val_acc=0.8984  (38.2 s)
+  época  4/15  loss=0.3978  acc=0.8652  val_loss=0.2125  val_acc=0.9325  (37.5 s)
+  época  5/15  loss=0.2858  acc=0.9012  val_loss=0.1656  val_acc=0.9433  (39.2 s)
+  época  6/15  loss=0.2335  acc=0.9215  val_loss=0.1239  val_acc=0.9613  (38.6 s)
+  época  7/15  loss=0.1721  acc=0.9419  val_loss=0.1037  val_acc=0.9670  (40.3 s)
+  época  8/15  loss=0.1425  acc=0.9523  val_loss=0.0919  val_acc=0.9713  (39.5 s)
+  época  9/15  loss=0.1257  acc=0.9569  val_loss=0.1120  val_acc=0.9663  (40.7 s)
+  época 10/15  loss=0.1165  acc=0.9621  val_loss=0.0883  val_acc=0.9751  (40.2 s)
+  época 11/15  loss=0.1011  acc=0.9652  val_loss=0.0796  val_acc=0.9762  (43.4 s)
+  época 12/15  loss=0.0931  acc=0.9683  val_loss=0.0693  val_acc=0.9805  (41.1 s)
+  época 13/15  loss=0.0931  acc=0.9686  val_loss=0.0734  val_acc=0.9751  (41.5 s)
+  época 14/15  loss=0.0908  acc=0.9680  val_loss=0.0746  val_acc=0.9801  (40.7 s)
+  época 15/15  loss=0.0760  acc=0.9738  val_loss=0.0598  val_acc=0.9808  (40.5 s)
+[16:02:59]    F4_entrenamiento: 599.81 s
+[16:02:59] -> F5_evaluacion
+[16:03:01]    F5_evaluacion: 2.30 s
+  test_accuracy=0.9820  test_loss=0.0664
+
+===== corrida_02 (16:03:01) =====
+[16:03:01] -> F1_ingesta
+[16:03:09]    F1_ingesta: 7.53 s
+[16:03:09] -> EDA_promedios
+[16:03:12]    EDA_promedios: 3.42 s
+[16:03:12] -> F2_limpieza
+[16:03:24]    F2_limpieza: 11.26 s
+[16:03:24] -> EDA_brillo
+[16:03:34]    EDA_brillo: 10.08 s
+[16:03:34] -> F3_preprocesamiento
+[16:03:44]    F3_preprocesamiento: 10.79 s
+[16:03:44] -> F4_entrenamiento
+  época  1/15  loss=2.8965  acc=0.1694  val_loss=1.6865  val_acc=0.4944  (36.8 s)
+  época  2/15  loss=1.2960  acc=0.5852  val_loss=0.5665  val_acc=0.8367  (38.2 s)
+  época  3/15  loss=0.6407  acc=0.7818  val_loss=0.3492  val_acc=0.8984  (37.7 s)
+  época  4/15  loss=0.3978  acc=0.8652  val_loss=0.2125  val_acc=0.9325  (39.7 s)
+  época  5/15  loss=0.2858  acc=0.9012  val_loss=0.1656  val_acc=0.9433  (39.8 s)
+  época  6/15  loss=0.2335  acc=0.9215  val_loss=0.1239  val_acc=0.9613  (40.2 s)
+  época  7/15  loss=0.1721  acc=0.9419  val_loss=0.1037  val_acc=0.9670  (42.6 s)
+  época  8/15  loss=0.1425  acc=0.9523  val_loss=0.0919  val_acc=0.9713  (41.5 s)
+  época  9/15  loss=0.1257  acc=0.9569  val_loss=0.1120  val_acc=0.9663  (39.7 s)
+  época 10/15  loss=0.1165  acc=0.9621  val_loss=0.0883  val_acc=0.9751  (41.6 s)
+  época 11/15  loss=0.1011  acc=0.9652  val_loss=0.0796  val_acc=0.9762  (39.5 s)
+  época 12/15  loss=0.0931  acc=0.9683  val_loss=0.0693  val_acc=0.9805  (40.9 s)
+  época 13/15  loss=0.0931  acc=0.9686  val_loss=0.0734  val_acc=0.9751  (40.3 s)
+  época 14/15  loss=0.0908  acc=0.9680  val_loss=0.0746  val_acc=0.9801  (40.4 s)
+  época 15/15  loss=0.0760  acc=0.9738  val_loss=0.0598  val_acc=0.9808  (41.9 s)
+[16:13:45]    F4_entrenamiento: 600.89 s
+[16:13:45] -> F5_evaluacion
+[16:13:48]    F5_evaluacion: 2.31 s
+  test_accuracy=0.9820  test_loss=0.0664
+
+===== corrida_03 (16:13:48) =====
+[16:13:48] -> F1_ingesta
+[16:13:56]    F1_ingesta: 7.44 s
+[16:13:56] -> EDA_promedios
+[16:13:59]    EDA_promedios: 3.44 s
+[16:13:59] -> F2_limpieza
+[16:14:11]    F2_limpieza: 11.66 s
+[16:14:11] -> EDA_brillo
+[16:14:23]    EDA_brillo: 12.17 s
+[16:14:23] -> F3_preprocesamiento
+[16:14:35]    F3_preprocesamiento: 11.88 s
+[16:14:35] -> F4_entrenamiento
+  época  1/15  loss=2.8965  acc=0.1694  val_loss=1.6865  val_acc=0.4944  (37.9 s)
+  época  2/15  loss=1.2960  acc=0.5852  val_loss=0.5665  val_acc=0.8367  (37.6 s)
+  época  3/15  loss=0.6407  acc=0.7818  val_loss=0.3492  val_acc=0.8984  (37.9 s)
+  época  4/15  loss=0.3978  acc=0.8652  val_loss=0.2125  val_acc=0.9325  (38.9 s)
+  época  5/15  loss=0.2858  acc=0.9012  val_loss=0.1656  val_acc=0.9433  (39.5 s)
+  época  6/15  loss=0.2335  acc=0.9215  val_loss=0.1239  val_acc=0.9613  (40.3 s)
+  época  7/15  loss=0.1721  acc=0.9419  val_loss=0.1037  val_acc=0.9670  (41.0 s)
+  época  8/15  loss=0.1425  acc=0.9523  val_loss=0.0919  val_acc=0.9713  (40.2 s)
+  época  9/15  loss=0.1257  acc=0.9569  val_loss=0.1120  val_acc=0.9663  (40.1 s)
+  época 10/15  loss=0.1165  acc=0.9621  val_loss=0.0883  val_acc=0.9751  (35.2 s)
+  época 11/15  loss=0.1011  acc=0.9652  val_loss=0.0796  val_acc=0.9762  (34.9 s)
+  época 12/15  loss=0.0931  acc=0.9683  val_loss=0.0693  val_acc=0.9805  (38.3 s)
+  época 13/15  loss=0.0931  acc=0.9686  val_loss=0.0734  val_acc=0.9751  (40.9 s)
+  época 14/15  loss=0.0908  acc=0.9680  val_loss=0.0746  val_acc=0.9801  (40.0 s)
+  época 15/15  loss=0.0760  acc=0.9738  val_loss=0.0598  val_acc=0.9808  (40.6 s)
+[16:24:18]    F4_entrenamiento: 583.27 s
+[16:24:18] -> F5_evaluacion
+[16:24:21]    F5_evaluacion: 2.23 s
+  test_accuracy=0.9820  test_loss=0.0664
+
+===== corrida_04 (16:24:21) =====
+[16:24:21] -> F1_ingesta
+[16:24:29]    F1_ingesta: 7.72 s
+[16:24:29] -> EDA_promedios
+[16:24:33]    EDA_promedios: 4.16 s
+[16:24:33] -> F2_limpieza
+[16:24:45]    F2_limpieza: 11.61 s
+[16:24:45] -> EDA_brillo
+[16:24:55]    EDA_brillo: 10.61 s
+[16:24:55] -> F3_preprocesamiento
+[16:25:06]    F3_preprocesamiento: 10.76 s
+[16:25:06] -> F4_entrenamiento
+  época  1/15  loss=2.8965  acc=0.1694  val_loss=1.6865  val_acc=0.4944  (37.9 s)
+  época  2/15  loss=1.2960  acc=0.5852  val_loss=0.5665  val_acc=0.8367  (39.0 s)
+  época  3/15  loss=0.6407  acc=0.7818  val_loss=0.3492  val_acc=0.8984  (37.9 s)
+  época  4/15  loss=0.3978  acc=0.8652  val_loss=0.2125  val_acc=0.9325  (39.2 s)
+  época  5/15  loss=0.2858  acc=0.9012  val_loss=0.1656  val_acc=0.9433  (41.3 s)
+  época  6/15  loss=0.2335  acc=0.9215  val_loss=0.1239  val_acc=0.9613  (40.0 s)
+  época  7/15  loss=0.1721  acc=0.9419  val_loss=0.1037  val_acc=0.9670  (40.5 s)
+  época  8/15  loss=0.1425  acc=0.9523  val_loss=0.0919  val_acc=0.9713  (40.1 s)
+  época  9/15  loss=0.1257  acc=0.9569  val_loss=0.1120  val_acc=0.9663  (42.5 s)
+  época 10/15  loss=0.1165  acc=0.9621  val_loss=0.0883  val_acc=0.9751  (40.7 s)
+  época 11/15  loss=0.1011  acc=0.9652  val_loss=0.0796  val_acc=0.9762  (41.2 s)
+  época 12/15  loss=0.0931  acc=0.9683  val_loss=0.0693  val_acc=0.9805  (42.1 s)
+  época 13/15  loss=0.0931  acc=0.9686  val_loss=0.0734  val_acc=0.9751  (41.0 s)
+  época 14/15  loss=0.0908  acc=0.9680  val_loss=0.0746  val_acc=0.9801  (40.6 s)
+  época 15/15  loss=0.0760  acc=0.9738  val_loss=0.0598  val_acc=0.9808  (39.9 s)
+[16:35:10]    F4_entrenamiento: 603.86 s
+[16:35:10] -> F5_evaluacion
+[16:35:12]    F5_evaluacion: 2.33 s
+  test_accuracy=0.9820  test_loss=0.0664
+
+===== corrida_05 (16:35:13) =====
+[16:35:13] -> F1_ingesta
+[16:35:21]    F1_ingesta: 8.68 s
+[16:35:21] -> EDA_promedios
+[16:35:25]    EDA_promedios: 3.99 s
+[16:35:25] -> F2_limpieza
+[16:35:39]    F2_limpieza: 13.29 s
+[16:35:39] -> EDA_brillo
+[16:35:49]    EDA_brillo: 10.40 s
+[16:35:49] -> F3_preprocesamiento
+[16:36:00]    F3_preprocesamiento: 10.97 s
+[16:36:00] -> F4_entrenamiento
+  época  1/15  loss=2.8965  acc=0.1694  val_loss=1.6865  val_acc=0.4944  (38.1 s)
+  época  2/15  loss=1.2960  acc=0.5852  val_loss=0.5665  val_acc=0.8367  (38.0 s)
+  época  3/15  loss=0.6407  acc=0.7818  val_loss=0.3492  val_acc=0.8984  (38.5 s)
+  época  4/15  loss=0.3978  acc=0.8652  val_loss=0.2125  val_acc=0.9325  (38.4 s)
+  época  5/15  loss=0.2858  acc=0.9012  val_loss=0.1656  val_acc=0.9433  (40.6 s)
+  época  6/15  loss=0.2335  acc=0.9215  val_loss=0.1239  val_acc=0.9613  (39.8 s)
+  época  7/15  loss=0.1721  acc=0.9419  val_loss=0.1037  val_acc=0.9670  (40.9 s)
+  época  8/15  loss=0.1425  acc=0.9523  val_loss=0.0919  val_acc=0.9713  (40.3 s)
+  época  9/15  loss=0.1257  acc=0.9569  val_loss=0.1120  val_acc=0.9663  (40.6 s)
+  época 10/15  loss=0.1165  acc=0.9621  val_loss=0.0883  val_acc=0.9751  (42.0 s)
+  época 11/15  loss=0.1011  acc=0.9652  val_loss=0.0796  val_acc=0.9762  (41.3 s)
+  época 12/15  loss=0.0931  acc=0.9683  val_loss=0.0693  val_acc=0.9805  (41.4 s)
+  época 13/15  loss=0.0931  acc=0.9686  val_loss=0.0734  val_acc=0.9751  (42.3 s)
+  época 14/15  loss=0.0908  acc=0.9680  val_loss=0.0746  val_acc=0.9801  (43.2 s)
+  época 15/15  loss=0.0760  acc=0.9738  val_loss=0.0598  val_acc=0.9808  (40.6 s)
+[16:46:06]    F4_entrenamiento: 606.14 s
+[16:46:06] -> F5_evaluacion
+[16:46:09]    F5_evaluacion: 2.41 s
+  test_accuracy=0.9820  test_loss=0.0664
+
+Resumen (s):
+               fase  n  media_s  desv_s   min_s   max_s  pct_del_total
+         F1_ingesta  5    8.043   0.671   7.439   8.852          1.245
+      EDA_promedios  5    3.658   0.392   3.277   4.163          0.566
+        F2_limpieza  5   11.745   0.914  10.918  13.292          1.817
+         EDA_brillo  5   10.613   0.920   9.809  12.165          1.642
+F3_preprocesamiento  5   11.118   0.459  10.758  11.879          1.720
+   F4_entrenamiento  5  598.794   9.027 583.273 606.141         92.651
+      F5_evaluacion  5    2.315   0.063   2.230   2.406          0.358
+      total_fases_s  5  646.287   8.898 632.079 655.889        100.000
+      total_reloj_s  5  646.555   8.888 632.365 656.152        100.000

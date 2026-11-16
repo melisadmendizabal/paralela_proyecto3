@@ -1,0 +1,17 @@
+hilos,formato,ms_por_lote,s_por_epoca_estimado
+1,NCHW,506.6,96.8
+1,channels_last,443.3,84.7
+2,NCHW,295.0,56.3
+2,channels_last,247.3,47.2
+4,NCHW,210.2,40.1
+4,channels_last,173.7,33.2
+6,NCHW,190.4,36.4
+6,channels_last,163.2,31.2
+8,NCHW,201.3,38.4
+8,channels_last,171.4,32.7
+10,NCHW,191.8,36.6
+10,channels_last,156.4,29.9
+12,NCHW,185.3,35.4
+12,channels_last,153.6,29.3
+16,NCHW,178.8,34.2
+16,channels_last,155.6,29.7

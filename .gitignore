@@ -30,6 +30,7 @@ kaggle.json
 # --- Entornos virtuales ---
 venv/
 .venv/
+.venv313t/
 env/
 
 # --- Python ---

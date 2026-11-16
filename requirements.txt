@@ -7,8 +7,10 @@
 torch==2.6.0+cu124
 
 # --- CUDA Python: kernels propios (@cuda.jit) ---
-numba>=0.61
-numba-cuda[cu12]
+# Versiones probadas. numba-cuda 0.30.4 usa np.row_stack, que numpy 2.5 eliminó;
+# src/numba_compat.py lo vuelve a definir (es un alias de np.vstack) antes de importar numba.cuda.
+numba==0.68.1
+numba-cuda[cu12]==0.30.4
 
 # --- Datos e imágenes (fase de CPU) ---
 numpy>=2.0

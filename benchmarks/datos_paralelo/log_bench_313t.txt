@@ -1,0 +1,25 @@
+Entorno: {"python": "3.13.17 experimental free-threading build (tags/v3.13.17:64e080d, Oct 21 2026, 14:15:16) [MSC v.1944 64 bit (AMD64)]", "implementacion": "CPython", "gil_activo_al_iniciar": false, "ecoqos_desactivado": true, "numpy": "2.4.6", "pandas": "3.0.3", "fecha": "2026-11-15T22:24:09", "argumentos": {"variantes": ["secuencial", "hilos"], "trabajadores": [1, 2, 4, 8, 12, 16], "repeticiones": 3, "etiqueta": "313t", "rehacer_referencia": false}}
+Referencia: {'metadatos': '76be4ee6434a14ad', 'promedios': '4b8af82ed7924108', 'limpia': '9d137a155452a1fc', 'brillos': 'd4d49961cc402bf4', 'X_train': 'b798b0a4ab32f805', 'X_val': 'b6b8eeebbf449bc1', 'X_test': 'd5117d16ae1724f1', 'y_train': '621b57b40065a6ff', 'y_val': '275a4da7f8ad1470', 'y_test': '1e4e2b2946d432c6'}
+Calentamiento...
+rep 1 secuencial N= 1  total= 45.80 s  (pool 0.00 s)  verificado=True  GIL=False
+rep 1 hilos      N= 1  total= 47.24 s  (pool 0.10 s)  verificado=True  GIL=False
+rep 1 hilos      N= 2  total= 23.63 s  (pool 0.10 s)  verificado=True  GIL=False
+rep 1 hilos      N= 4  total= 12.73 s  (pool 0.10 s)  verificado=True  GIL=False
+rep 1 hilos      N= 8  total=  9.05 s  (pool 0.10 s)  verificado=True  GIL=False
+rep 1 hilos      N=12  total=  7.93 s  (pool 0.12 s)  verificado=True  GIL=False
+rep 1 hilos      N=16  total=  7.40 s  (pool 0.14 s)  verificado=True  GIL=False
+rep 2 secuencial N= 1  total= 44.22 s  (pool 0.00 s)  verificado=-  GIL=False
+rep 2 hilos      N= 1  total= 47.10 s  (pool 0.11 s)  verificado=-  GIL=False
+rep 2 hilos      N= 2  total= 22.99 s  (pool 0.11 s)  verificado=-  GIL=False
+rep 2 hilos      N= 4  total= 12.70 s  (pool 0.12 s)  verificado=-  GIL=False
+rep 2 hilos      N= 8  total=  8.48 s  (pool 0.10 s)  verificado=-  GIL=False
+rep 2 hilos      N=12  total=  7.40 s  (pool 0.11 s)  verificado=-  GIL=False
+rep 2 hilos      N=16  total=  7.09 s  (pool 0.11 s)  verificado=-  GIL=False
+rep 3 secuencial N= 1  total= 44.94 s  (pool 0.00 s)  verificado=-  GIL=False
+rep 3 hilos      N= 1  total= 46.78 s  (pool 0.10 s)  verificado=-  GIL=False
+rep 3 hilos      N= 2  total= 23.63 s  (pool 0.10 s)  verificado=-  GIL=False
+rep 3 hilos      N= 4  total= 12.27 s  (pool 0.10 s)  verificado=-  GIL=False
+rep 3 hilos      N= 8  total=  8.47 s  (pool 0.11 s)  verificado=-  GIL=False
+rep 3 hilos      N=12  total=  7.52 s  (pool 0.11 s)  verificado=-  GIL=False
+rep 3 hilos      N=16  total=  7.07 s  (pool 0.11 s)  verificado=-  GIL=False
+Guardado en C:\Users\melis\Documents\noCuarentena\semestre 8\paralela\paralela_proyecto3\benchmarks\datos_paralelo\bench_datos_313t.csv

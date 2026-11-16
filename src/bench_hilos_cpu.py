@@ -14,6 +14,7 @@ import torch
 from torch import nn
 
 from . import config
+from .energia import desactivar_ecoqos
 from .modelo import CNN2
 
 LOTES_MEDIDOS = 15
@@ -44,6 +45,7 @@ def medir(hilos, channels_last):
 
 
 def main():
+    print("EcoQoS desactivado:", desactivar_ecoqos())
     filas = []
     for hilos in (1, 2, 4, 6, 8, 10, 12, 16):
         for cl in (False, True):
