@@ -1,7 +1,7 @@
 # Proyecto 3 — Mejorando algoritmos con CUDA
 
 CC3069 Computación Paralela y Distribuida, Universidad del Valle de Guatemala.
-Belén Monterroso 231497 · Melisa Mendizabal 23778 · Renato Rojas 23813
+Melisa Mendizabal 23778 · Renato Rojas 23813
 
 Aceleración del clasificador del alfabeto de señas ASL del Laboratorio 3 de Data Science
 (dataset *ASL Alphabet* de Kaggle, 29 clases, CNN de 2.2 M de parámetros):
